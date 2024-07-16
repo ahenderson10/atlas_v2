@@ -240,7 +240,7 @@ p{
 }
 
 .contact-container{
-    overflow: hidden;
+    overflow: wrap;
     display:flex;
     justify-content: space-evenly;
     background-color: #F0E2D2; 
