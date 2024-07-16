@@ -26,6 +26,7 @@ body{
 }
 
 .moblie-background{
+    max-width: 100vh;
 
     display: none;
 }
@@ -78,8 +79,7 @@ body{
 
 .mobile-menu li{
     padding: 7%; /* Adjust padding as needed */
-     margin-right: 12%;
-    
+    margin-right: 12%;
 }
 
 
@@ -236,7 +236,7 @@ p{
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 40px;
-    width: 100%;
+    max-width: 100%;
     
 
 }
@@ -246,15 +246,18 @@ p{
     display:flex;
     justify-content: space-evenly;
     background-color: #F0E2D2; 
+    overflow: hidden;
     text-align: center;
     padding:60px;
     color: #364042;
     border: 2px solid #5B6D92;
     padding: 14px 70px;
     border-radius: 50px;
+   
 }
 
 .contact-left{
+
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -437,7 +440,9 @@ p{
     background-color: #F0E2D2; 
     border: 4px solid #5B6D92;
     border-radius: 30px;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow-x: wrap;
     text-align: center;
     width: 100%;  /* Set the width of the boxes */
     height: 300px; /* Set the height of the boxes */
@@ -455,29 +460,35 @@ p{
 
 
 
-.service-box:hover .box-text{
-    display:none;
-}
-
-.service-box:hover .new-text{
-    text-align: center;
-    opacity: 1;
-}
-
-.service-box.clicked .box-text {
+/*.service-box.clicked .box-text {
     opacity: 0;
 }
 
 .service-box.clicked .new-text {
     opacity: 1;
+
+
+    
+.service-box:hover .box-text{
+    display:block;
+    opacity: 0;
 }
+
+.service-box:hover .new-text{
+    text-align: center;
+    display:block;
+    opacity: 0;
+    opacity: 1;
+}
+
+}*/
 
 .new-text{
     position: absolute;
-    opacity: 0;
+    display:none;
     color: #364024;
-    margin-right: 2%;
-    margin-left: 2%;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
 }
 
 .new-text p{
@@ -490,6 +501,17 @@ p{
 
 
 }
+
+
+/* .service-box:hover .box-text{
+    display:None;
+   
+}
+
+.service-box:hover .new-text{
+    text-align: center;
+    display:block;
+} */
 
 .box-text h2{
     position: absolute;
@@ -598,7 +620,7 @@ footer {
 
     .new-text{
         position: absolute;
-        opacity: 0;
+        opacity: 1;
         color: #364024;
         margin-right: 5%;
         margin-left: 5%;
@@ -661,12 +683,48 @@ footer {
 
     }
 
+
     .contact-container{
         padding: 14px;
 
     }
 
+    /* .service-box:hover .box-text{
+        display:none;
+      
+    }
+    
+    .service-box:hover .new-text{
+        text-align: center;
+        display:block;
+
+    } */
+
+    /*.service-box.clicked .box-text {
+        opacity: 0;
+    }
+    
+    .service-box.clicked .new-text {
+        opacity: 1;
+
+          .service-box:hover .box-text{
+        display:block;
+        opacity: 0;
+    }
+    
+    .service-box:hover .new-text{
+        text-align: center;
+        display:block;
+        opacity: 0;
+        opacity: 1;
+    }
+    }*/
+
+  
+
+    
 
     
     
 }
+
