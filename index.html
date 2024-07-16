@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Marketing</title>
+    <title>Atlas Strategies Marketing</title>
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="icon" href="Atlas.ico" type="image/x-icon"> -->
     <link rel="icon" href="Altas_S.png" sizes="32x32" type="image/png">
@@ -11,14 +11,32 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
 
     <script>
-        function toggleText(element) {
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.service-box').forEach(box => {
+                box.addEventListener('click', function() {
+                    const boxText = this.querySelector('.old-text');
+                    const hiddenText = this.querySelector('.new-text');
+                    
+                    if (hiddenText.style.display === 'none' || hiddenText.style.display === '') {
+                        hiddenText.style.display = 'block';
+                        boxText.style.display = 'none';
+                    } else {
+                        hiddenText.style.display = 'none';
+                        boxText.style.display = 'block';
+                    }
+                });
+            });
+        });
+  
+        //function toggleText(element) {
             
-            if (element.classList.contains('clicked')) {
-                element.classList.remove('clicked');
-            } else {
-                element.classList.add('clicked');
-            }
-        }
+           // if (element.classList.contains('clicked')) {
+                //element.classList.remove('clicked');
+            //} else {
+                //element.classList.add('clicked');
+            //}
+        //}
 
 
         function toggleMenu(element) {
@@ -82,7 +100,6 @@
 
 
     <div class="contact-section">
-        <!-- <h2>Contact Us</h2> -->
         <div class="contact-container">
             <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
 
@@ -105,11 +122,11 @@
             <div class="contact-left-right">
                 <h2>Or Reach Us By</h2>
             </div>
-            <p>Email: ahenderson@atlas-marketing.co</p>
+            <p>Email: teammailbox@atlas-marketing.co</p>
             <p>Phone: (123) 456-7890</p>
             <p>Follow us on:
                 <a href="#">Facebook</a> | 
-                <a href="#">Instagram</a> | 
+                <a href="https://www.instagram.com/atlastrategiesmarketing/">Instagram</a> | 
                 <a href="#">Twitter</a> | 
                 <a href="#">LinkedIn</a>
             </p>  
@@ -155,8 +172,10 @@
     <div class="services-section">
         
         
-        <div class="service-box"  onclick="toggleText(this)">
+        <div class="service-box">
+            <div class="old-text">
             <h2 class="box-text">Search Engine Optimization</h2>
+            </div>
             <div class="new-text">
             <h2>Search Engine Optimization</h2>
             <p >SEO is an ever-changing art and can never be fully mastered. Not to worry with our fingers on the pulse of 
@@ -165,9 +184,11 @@
             </p>
             </div>
         </div>
-        <div class="service-box" onclick="toggleText(this)">
-            <h2 class="box-text"> Building A Client Funnel
+        <div class="service-box">
+            <div class="old-text">
+            <h2 class="box-text">Building A Client Funnel
             </h2>
+             </div>
             <div class="new-text">
                 <h2>Building A Client Funnel</h2>
                 <p >Our goal with the client funnel is to optimize all aspects of your business to bring in as many new clients as possible. 
@@ -176,8 +197,10 @@
                 </p>
             </div>
         </div>
-        <div class="service-box" onclick="toggleText(this)">
+        <div class="service-box">
+            <div class="old-text">
             <h2 class="box-text">Web Developent</h2>
+            </div>
 
             <div class="new-text">
                 <h2>Web Developent</h2>
@@ -188,8 +211,10 @@
                 </p>
             </div>
         </div>
-        <div class="service-box" onclick="toggleText(this)">
+        <div class="service-box">
+            <div class="old-text">
             <h2 class="box-text">Social Media Ad Campaigns</h2>
+        </div>
 
             <div class="new-text">
                 <h2>Social Media Ad Campaigns</h2>
@@ -201,9 +226,11 @@
             </div>
 
         </div>
-        <div class="service-box" onclick="toggleText(this)">
+        <div class="service-box">
+            <div class="old-text">
             <h2 class="box-text">Building a Newsletter 
             </h2>
+        </div>
 
             <div class="new-text">
                 <h2>Building a Newsletter </h2>
@@ -214,8 +241,10 @@
             </div>
             
         </div>
-        <div class="service-box" onclick="toggleText(this)">
+        <div class="service-box">
+            <div class="old-text">
             <h2 class="box-text">EXTRA</h2>
+        </div>
             <p class="new-text">
             </p>
         </div>
